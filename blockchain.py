@@ -40,9 +40,9 @@ def load_data():
 # we want to store blockchain and open transactions to a file
 def save_data():
 	with open('blockchain.txt', mode='w') as f:
-		f.write(str(blockchain))
+		f.write(json.dumps(blockchain))
 		f.write('\n')  
-		f.write(str(open_transactions))
+		f.write(json.dumps(open_transactions))
 	# we now want ot write dataa to the file
 		
 		
